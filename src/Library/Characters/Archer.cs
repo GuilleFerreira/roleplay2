@@ -1,6 +1,6 @@
 namespace RoleplayGame
 {
-    public class Archer
+    public class Archer : IEquiparArmadura
     {
         private int health = 100;
 
@@ -54,6 +54,11 @@ namespace RoleplayGame
         public void Cure()
         {
             this.Health = 100;
+        }
+
+        public void EquiparArmadura(IEquiparArmadura Helmet)
+        {
+            this.Helmet = Helmet;
         }
     }
 }
